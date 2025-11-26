@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Línea del tiempo de Internet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Línea del tiempo de la historia de Internet</h1>
+    <p>Explora los eventos más importantes que dieron forma a Internet — busca, filtra y haz clic en los elementos para ver detalles.</p>
+  </header>
+  <main>
+    <section class="controls">
+      <input id="search" placeholder="Buscar eventos por palabra clave (ej.: \"navegador\", \"http\")"/>
+      <select id="filter">
+        <option value="all">Todas las categorías</option>
+        <option value="protocol">Protocolo</option>
+        <option value="browser">Navegador</option>
+        <option value="company">Empresa/servicio</option>
+        <option value="standard">Estándar/Tecnología</option>
+        <option value="milestone">Hito</option>
+        <option value="platform">Plataforma</option>
+      </select>
+      <label>Rango
+        <input id="rangeStart" type="number" value="1965"/> — 
+        <input id="rangeEnd" type="number" value="2025"/>
+      </label>
+      <button id="reset">Restablecer</button>
+    </section>
+
+    <section id="timeline-container">
+      <div id="timeline">
+        <!-- Timeline items will be inserted here -->
+      </div>
+      <div id="details" aria-live="polite">
+        <em>Haz clic en un elemento de la línea del tiempo para ver más detalles.</em>
+      </div>
+    </section>
+
+    <section id="legend">
+      <strong>Leyenda:</strong>
+      <span class="legend-item" data-cat="protocol">Protocolo</span>
+      <span class="legend-item" data-cat="browser">Navegador</span>
+      <span class="legend-item" data-cat="company">Empresa/servicio</span>
+      <span class="legend-item" data-cat="standard">Estándar/Tecnología</span>
+      <span class="legend-item" data-cat="milestone">Hito</span>
+      <span class="legend-item" data-cat="platform">Plataforma</span>
+    </section>
+  </main>
+  <footer>
+    <small>La línea del tiempo es una demostración. Fuente: hitos seleccionados de la historia de Internet.</small>
+  </footer>
+  <script src="data.js"></script>
+  <script src="timeline.js"></script>
+</body>
+</html>
